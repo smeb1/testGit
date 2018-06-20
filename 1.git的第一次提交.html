@@ -29,6 +29,20 @@
     *   git reset --hard commit_id
     *   或者 git reset --hard HEAD^^^     ^数量就是最近的多少个版本
     *   git reflog 查看命令历史,以确定要回退到哪个版本
+    * 5.放弃修改
+    *   当直接commit没有add的话，使用下面这条命令
+    *   git checkout -- 文件名
+    *   当已经add了，但是没有commit的时候，用下面这条命令
+    *   git reset HEAD 文件名
+    *   此时将状态放到了工作区，这时再使用checkout就可以了
+    * 6.删除文件
+    *   git rm 文件名
+    *   删除错误，要还原
+    *       git reset HEAD 文件名
+    *       git checkout -- 文件名
+    *       这两步就可以将文件恢复了
+    *   如果删除文件使用了git rm ，那么是上面2条命令
+    *   否则 只用checkout就行了
     * */
 </script>
 </body>
